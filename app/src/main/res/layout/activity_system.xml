@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SystemActivity">
+
+    <Button
+        android:id="@+id/convert"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="59dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="进制转换"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/calculate"
+        app:layout_constraintEnd_toStartOf="@+id/clear"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="352dp"
+        android:layout_marginEnd="94dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="清除"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/convert"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="计算"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/system"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/system"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#ABFF9800"
+        android:fontFamily="sans-serif"
+        android:text="进制"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/triangle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/calculate" />
+
+    <Button
+        android:id="@+id/triangle"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="三角"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/unit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/system" />
+
+    <Button
+        android:id="@+id/unit"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="单位"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/triangle" />
+
+    <TextView
+        android:id="@+id/binarySystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="31dp"
+        android:text="二进制:          0d"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/octalSystem"
+        app:layout_constraintEnd_toStartOf="@+id/edBinarySystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/octalSystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:text="八进制:            0"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/decimalSystem"
+        app:layout_constraintEnd_toStartOf="@+id/edOctalSystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/binarySystem" />
+
+    <TextView
+        android:id="@+id/decimalSystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="27dp"
+        android:text="十进制:"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/hexSystem"
+        app:layout_constraintEnd_toStartOf="@+id/edDecimalSystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/octalSystem" />
+
+    <TextView
+        android:id="@+id/hexSystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="385dp"
+        android:text="十六进制:      0x"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/calculate"
+        app:layout_constraintEnd_toStartOf="@+id/edHexSystem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/decimalSystem" />
+
+    <EditText
+        android:id="@+id/edBinarySystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="31dp"
+        android:digits="01"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/edOctalSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/binarySystem"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edOctalSystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="28dp"
+        android:digits="01234567"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/edDecimalSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/octalSystem"
+        app:layout_constraintTop_toBottomOf="@+id/edBinarySystem" />
+
+    <EditText
+        android:id="@+id/edDecimalSystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="27dp"
+        android:digits="0123456789"
+        android:ems="10"
+        android:inputType="number"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/edHexSystem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/decimalSystem"
+        app:layout_constraintTop_toBottomOf="@+id/edOctalSystem" />
+
+    <EditText
+        android:id="@+id/edHexSystem"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="385dp"
+        android:digits="0123456789abcdef"
+        android:ems="10"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/system"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hexSystem"
+        app:layout_constraintTop_toBottomOf="@+id/edDecimalSystem" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

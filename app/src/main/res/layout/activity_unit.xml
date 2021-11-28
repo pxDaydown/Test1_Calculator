@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RadioGroup
+        android:id="@+id/choice1"
+        android:layout_width="240dp"
+        android:layout_height="42dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/number8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_result">
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="货币" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="长度" />
+
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="重量" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/sign_point"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="."
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/calculate"
+        app:layout_constraintEnd_toStartOf="@+id/number0"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="计算"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/system"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_point" />
+
+    <Button
+        android:id="@+id/number8"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="8"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number5"
+        app:layout_constraintEnd_toStartOf="@+id/number9"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number7"
+        app:layout_constraintTop_toBottomOf="@+id/choice1" />
+
+    <Button
+        android:id="@+id/number9"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="9"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number6"
+        app:layout_constraintEnd_toStartOf="@+id/sign_multiply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number8"
+        app:layout_constraintTop_toBottomOf="@+id/choice1" />
+
+
+    <Button
+        android:id="@+id/sign_multiply"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:textColor="#FF9800"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/change"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number9"
+        app:layout_constraintTop_toBottomOf="@+id/choice1"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <Button
+        android:id="@+id/number4"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="4"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number1"
+        app:layout_constraintEnd_toStartOf="@+id/number5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number7" />
+
+    <Button
+        android:id="@+id/number5"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="5"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number2"
+        app:layout_constraintEnd_toStartOf="@+id/number6"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number4"
+        app:layout_constraintTop_toBottomOf="@+id/number8" />
+
+    <Button
+        android:id="@+id/number6"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="6"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number3"
+        app:layout_constraintEnd_toStartOf="@+id/change"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number5"
+        app:layout_constraintTop_toBottomOf="@+id/number9" />
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="转换"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_ac"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number6"
+        app:layout_constraintTop_toBottomOf="@+id/sign_multiply" />
+
+    <Button
+        android:id="@+id/number1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="1"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_point"
+        app:layout_constraintEnd_toStartOf="@+id/number2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number4" />
+
+    <Button
+        android:id="@+id/number2"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number0"
+        app:layout_constraintEnd_toStartOf="@+id/number3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number1"
+        app:layout_constraintTop_toBottomOf="@+id/number5" />
+
+    <Button
+        android:id="@+id/number3"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="3"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_bracket"
+        app:layout_constraintEnd_toStartOf="@+id/sign_ac"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number2"
+        app:layout_constraintTop_toBottomOf="@+id/number6" />
+
+    <Button
+        android:id="@+id/number0"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/system"
+        app:layout_constraintEnd_toStartOf="@+id/sign_bracket"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sign_point"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/system"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="进制"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/triangle"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/calculate"
+        app:layout_constraintTop_toBottomOf="@+id/number0" />
+
+    <Button
+        android:id="@+id/sign_ac"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="AC"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/sign_del"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number3"
+        app:layout_constraintTop_toBottomOf="@+id/change" />
+
+    <Button
+        android:id="@+id/number7"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="7"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/number4"
+        app:layout_constraintEnd_toStartOf="@+id/number8"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choice1" />
+
+    <Button
+        android:id="@+id/sign_del"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="DEL"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/unit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/sign_bracket"
+        app:layout_constraintTop_toBottomOf="@+id/sign_ac" />
+
+    <Button
+        android:id="@+id/unit"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#ABFF9800"
+        android:fontFamily="sans-serif"
+        android:text="单位"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/triangle"
+        app:layout_constraintTop_toBottomOf="@+id/sign_del" />
+
+    <Button
+        android:id="@+id/sign_bracket"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/triangle"
+        app:layout_constraintEnd_toStartOf="@+id/sign_del"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/number0"
+        app:layout_constraintTop_toBottomOf="@+id/number3" />
+
+    <Button
+        android:id="@+id/triangle"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:fontFamily="sans-serif"
+        android:text="三角"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/unit"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/system"
+        app:layout_constraintTop_toBottomOf="@+id/sign_bracket" />
+
+    <TextView
+        android:id="@+id/num_calculate"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:textAlignment="viewEnd"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlCompat" />
+
+    <TextView
+        android:id="@+id/num_result"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="52dp"
+        android:textAlignment="viewEnd"
+        android:textColor="#9F9F9F"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/num_calculate" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/num_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/num_result" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinner2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/num_calculate"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
